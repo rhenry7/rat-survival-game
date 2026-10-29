@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Rat Survival"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0.23, 0.16, 0.12, 1)
+config/icon="res://assets/pizza.png"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=980
+window/size/window_width_override=540
+window/size/window_height_override=735
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="rat"
+2d_physics/layer_2="foot"
+2d_physics/layer_3="pizza"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.23, 0.16, 0.12, 1)

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c80q1dpdmdaei"]
+
+[ext_resource type="Script" uid="uid://deppvlml2dmfb" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://bofun7v8jt1j6" path="res://scripts/background.gd" id="2_bg"]
+[ext_resource type="PackedScene" path="res://scenes/rat.tscn" id="3_rat"]
+[ext_resource type="Script" uid="uid://dy52utjdoo3ty" path="res://scripts/hud.gd" id="4_hud"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="World"]
+z_index = -10
+script = ExtResource("2_bg")
+
+[node name="Pizzas" type="Node2D" parent="World"]
+
+[node name="Rat" parent="World" instance=ExtResource("3_rat")]
+position = Vector2(360, 820)
+
+[node name="Feet" type="Node2D" parent="World"]
+
+[node name="FootTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="PizzaTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("4_hud")

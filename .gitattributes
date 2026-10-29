@@ -1,0 +1,5 @@
+# Normalize line endings for Godot text files
+* text=auto eol=lf
+*.png binary
+*.wasm binary
+*.pck binary

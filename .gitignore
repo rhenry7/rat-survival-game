@@ -1,0 +1,9 @@
+# Godot editor cache / imported resources (regenerated on open)
+.godot/
+*.tmp
+
+# Upload zip for itch.io (regenerated from build/web)
+build/*.zip
+
+# macOS
+.DS_Store
